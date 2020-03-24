@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/ic_logo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText android:hint="@string/login_string"
+            android:autofillHints="@string/login_string"
+            android:id="@+id/txt_login"
+            android:inputType="text"
+            style="@style/TextBoxStyle"/>
+
+        <EditText android:hint="@string/password"
+            android:autofillHints="@string/password"
+            android:id="@+id/txt_password"
+            android:inputType="textPassword"
+            style="@style/TextBoxStyle" />
+
+        <Button android:text="@string/signin_email"
+            android:id="@+id/btn_login_email"
+            android:textColor="@color/login_email"
+            style="@style/ButtonStyle" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="OR"
+                android:textColor="@color/dark_gray"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toStartOf="@id/tvText"
+                android:background="@color/gray"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@id/tvText"
+                android:background="@color/gray"
+                />
+
+        </RelativeLayout>
+
+        <Button
+            android:text="@string/signin_facebook"
+            android:id="@+id/btn_login_facebook"
+            android:drawableStart="@drawable/ic_facebook_logo"
+            android:drawablePadding="-80dp"
+            android:paddingStart="100dp"
+            style="@style/ButtonStyle"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't you have an account? "
+                android:textColor="@color/text_gray"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/link_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textStyle="bold"
+                android:textColor="@color/dark_gray"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
