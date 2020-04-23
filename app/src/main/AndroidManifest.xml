@@ -3,6 +3,7 @@
     package="com.example.clonestagram">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -11,9 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".navigation.AddPhotoActivity"></activity>
-        <activity android:name=".SignupActivity"></activity>
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".navigation.directMessage.DirectMessageActivity"></activity>
+        <activity android:name=".navigation.addPost.AddNewPostActivity" />
+        <activity android:name=".navigation.addPost.AddPhotoActivity" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

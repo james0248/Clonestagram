@@ -53,6 +53,20 @@
     <string name="logo">Instagram logo</string>
     <string name="camera">Add photo icon</string>
     <string name="dm">Direct message icon</string>
+    <string name="cancel">Cancel</string>
+    <string name="gallery">Gallery</string>
+    <string name="pictures">Pictures</string>
+    <string name="video">Video</string>
+    <string name="others">Others...</string>
+    <string name="next">Next</string>
+    <string name="selected_image">Selected Image</string>
+    <string name="search">Search</string>
+    <string name="messages">Messages</string>
+    <string name="suggestions">Suggestions</string>
+    <string name="direct">Direct</string>
+    <string name="new_message">New Message</string>
+    <string name="video_chat">Video Chat</string>
+    <string name="dm_camera">Camera</string>
 
     <!-- etc -->
     <item name="visible" type="id" />

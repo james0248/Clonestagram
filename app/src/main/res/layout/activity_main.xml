@@ -6,16 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:clipToPadding="false"
-    >
+    android:clipToPadding="false">
 
         <Toolbar
             android:id="@+id/nav_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorWhite"
-            android:elevation="2dp"
-            >
+            android:elevation="2dp">
 
                 <ImageView
                     android:id="@+id/ic_camera"
@@ -30,7 +28,7 @@
                     android:layout_width="112dp"
                     android:layout_height="40dp"
                     android:contentDescription="@string/logo"
-                    app:srcCompat="@drawable/ic_logo"
+                    app:srcCompat="@drawable/main_logo"
                     android:layout_marginStart="25dp"
                     />
 

@@ -1,9 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".navigation.AddPhotoActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".navigation.addPost.AddPhotoActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Toolbar
+        android:id="@+id/nav_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:elevation="2dp">
+
+        <ImageView
+            android:contentDescription="@string/cancel"
+            android:id="@+id/ic_cancel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_close" />
+
+        <Spinner
+            android:id="@+id/spinner_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:overlapAnchor="false" />
+
+        <TextView
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/next"
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="15dp"
+            android:textSize="22.5sp"
+            android:textColor="@color/com_facebook_blue"
+            />
+
+    </Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/nav_toolbar"
+        android:layout_above="@+id/tab_upload">
+
+        <ImageView
+            android:id="@+id/img_selected"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:contentDescription="@string/selected_image" />
+
+        <GridView
+            android:id="@+id/img_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/img_selected"
+            android:numColumns="4"
+            android:horizontalSpacing="2dp"
+            android:verticalSpacing="2dp"
+            android:layout_marginVertical="2dp"
+            android:scrollbars="none">
+
+        </GridView>
+
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_upload"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:elevation="4dp"
+        app:tabTextColor="@color/text_gray"
+        app:tabSelectedTextColor="@color/colorBlack"
+        app:tabIndicatorColor="@color/colorBlack">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:text="@string/gallery"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:text="@string/pictures"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:text="@string/video" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+</RelativeLayout>
